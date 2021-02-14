@@ -8,14 +8,15 @@
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
-    "localtunnel": "lt -p 3000 -s corey-codes",
+    "localtunnel": "lt -p 3000 -s investment-tracker",
     "share": "npm-run-all --parallel open:src localtunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Cory House",
+  "author": "Corey Cacananta",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
